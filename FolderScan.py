@@ -18,7 +18,7 @@ def convert_size(size_bytes):
 path = input("Copy and paste path to files: ")
 
 if __name__ == '__main__':
-    # Get all files.
+    # Get all files
     files = os.listdir(path)
 
     pairs = []
@@ -50,10 +50,10 @@ df.to_excel(writer, index=False, sheet_name='Sheet1')
 workbook = writer.book
 worksheet = writer.sheets['Sheet1']
 
-new_format = workbook.add_format()
-new_format.set_align('right')
+column_format = workbook.add_format()
+column_format.set_align('right')
 
 worksheet.set_column('A:A', 45)
-worksheet.set_column('B:B', 10, new_format)
+worksheet.set_column('B:B', 10, column_format)
 
 writer.save()
