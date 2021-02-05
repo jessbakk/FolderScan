@@ -50,10 +50,10 @@ df.to_excel(writer, index=False, sheet_name='Sheet1')
 workbook = writer.book
 worksheet = writer.sheets['Sheet1']
 
-column_format = workbook.add_format()
-column_format.set_align('right')
+format_column = workbook.add_format()
+format_column.set_align('right')
 
 worksheet.set_column('A:A', 45)
-worksheet.set_column('B:B', 10, column_format)
+worksheet.set_column('B:B', 10, format_column)
 
 writer.save()
